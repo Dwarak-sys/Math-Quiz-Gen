@@ -2,8 +2,7 @@ import random
 
 operations = ['+', '-', '*', '/']
 num_questions = 5
-num_range = (1, 20)  # Range of numbers for operands
-
+num_range = (1, 20) 
 score = 0
 
 for _ in range(num_questions):
@@ -18,7 +17,6 @@ for _ in range(num_questions):
     elif operation == '*':
         correct_answer = a * b
     elif operation == '/':
-        # Ensure the result is an integer for division
         b = random.randint(1, 10)  # Avoid division by zero
         a = b * random.randint(*num_range)
         correct_answer = a // b
